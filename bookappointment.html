@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="./bookappointment.css">
+</head>
+<body>
+    <h1>Book Appointment</h1>
+    <form id="appointmentForm" >
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required><br><br>
+
+        <label for="patientName">Patient Name:</label>
+        <input type="text" id="patientName" name="patientName" required><br><br>
+
+        <label for="contactNumber">Contact Number:</label>
+        <input type="text" id="contactNumber" name="contactNumber" required><br><br>
+
+        <label for="doctorName">Doctor Name:</label>
+        <input type="text" id="doctorName" name="doctorName" required><br><br>
+
+        <button type="submit">Book Appointment</button>
+    </form>
+    
+    <script>
+        document.getElementById('appointmentForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const date = formData.get('date');
+            const time = formData.get('time');
+            const patientName = formData.get('patientName');
+            const contactNumber = formData.get('contactNumber');
+            const doctorName = formData.get('doctorName');
+
+            try {
+                const response = await fetch('/book-appointment', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ date, time, patientName, contactNumber, doctorName })
+                });
+                
+                const responseData = await response.json();
+                alert(responseData.message);
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Failed to book appointment. Please try again later.');
+            }
+        });
+    </script>
+</body>
+</html>

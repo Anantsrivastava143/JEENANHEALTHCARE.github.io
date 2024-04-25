@@ -1,0 +1,175 @@
+{
+  "Eye": [
+    {
+      "name": "Dr. John Doe",
+      "specialization": "Eye",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "./doctor1.jpg"
+    },
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "Eye",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "./doctor2.png"
+    },
+    {
+      "name": "Dr. John Williams",
+      "specialization": "Eye",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "./doctor3.jpg"
+    },
+    {
+      "name": "Dr.Katy Lady",
+      "specialization": "Eye",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "./doctor4.jpg"
+    }
+    
+  ],
+  "Cardiology": [
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "Cardiology",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "./doctor4.jpg"
+    },
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "Cardiology",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "./doctor3.jpg"
+    },
+    {
+      "name": "Dr. John Williams",
+      "specialization": "Cardiology",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "./doctor2.png"
+    },
+    {
+      "name": "Dr.Katy Lady",
+      "specialization": "Cardiology",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "./doctor1.jpg"
+    }
+  ],
+  "Pulmonology": [
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "Pulmonology",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "./doctor4.jpg"
+    },
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "Pulmonology",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "./doctor3.jpg"
+    },
+    {
+      "name": "Dr. John Williams",
+      "specialization": "Pulmonology",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "./doctor2.png"
+    },
+    {
+      "name": "Dr.Katy Lady",
+      "specialization": "Pulmonology",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "./doctor1.jpg"
+    }
+  ],
+  "Neurology": [
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "Neurology",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "./doctor4.jpg"
+    },
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "Neurology",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "./doctor3.jpg"
+    },
+    {
+      "name": "Dr. John Williams",
+      "specialization": "Neurology",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "./doctor2.png"
+    },
+    {
+      "name": "Dr.Katy Lady",
+      "specialization": "Neurology",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "./doctor1.jpg"
+    }
+  ],
+  "Physician": [
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "Physician",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "./doctor4.jpg"
+    },
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "Physician",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "./doctor3.jpg"
+    },
+    {
+      "name": "Dr. John Williams",
+      "specialization": "Physician",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "./doctor2.png"
+    },
+    {
+      "name": "Dr.Katy Lady",
+      "specialization": "Physician",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "./doctor1.jpg"
+    }
+  ],
+  "Ent": [
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "Ent",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "./doctor4.jpg"
+    },
+    {
+      "name": "Dr. Jane Smith",
+      "specialization": "Ent",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "./doctor3.jpg"
+    },
+    {
+      "name": "Dr. John Williams",
+      "specialization": "Ent",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "./doctor2.png"
+    },
+    {
+      "name": "Dr.Katy Lady",
+      "specialization": "Ent",
+      "timing": "8.00 AM - 4.00 PM",
+      "image": "./doctor1.jpg"
+    }
+  ],
+  "laboratory": [
+    {
+      "name": "Laboratory Reports",
+      "specialization": "Collect your entire report from here",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "./doctor4.jpg"
+    }
+  ],
+  "Medical": [
+    {
+      "name": "Medical Record",
+      "specialization": "Collect your entire record from here",
+      "timing": "9.00 AM - 5.00 PM",
+      "image": "./doctor4.jpg"
+    }
+  ]
+}

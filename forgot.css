@@ -1,0 +1,25 @@
+body{
+    margin-top:20px;
+    background: #d6d6d6;
+    margin-top: 80px;
+}
+.account-block{
+    padding: 0;
+    background-image: url('./depositphotos_521424708-stock-illustration-forgot-password-account-login-web.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    top:5rem;
+    height: 53%;
+    position: relative;
+}
+
+.text-theme {
+    color: #2fc4b2 !important;
+}
+
+
+.btn-theme button{
+padding: 10px 25px;
+background-color: #2fc4b2;
+border-color: #2fc4b2;
+}

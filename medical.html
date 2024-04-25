@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Record</title>
+<link rel="stylesheet" href="medical.css">
+</head>
+<body>
+<div class="container">
+  <h1>Patient Record</h1>
+  <form action="/patients" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required><br><br>
+    
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select><br><br>
+    
+    <label for="medicalHistory">Medical History:</label>
+    <textarea id="medicalHistory" name="medicalHistory" rows="4" required></textarea><br><br>
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required><br><br>
+    
+    <label for="contact">Contact:</label>
+    <input type="tel" id="contact" name="contact" required><br><br>
+    
+    <label for="bloodGroup">Blood Group:</label>
+    <input type="text" id="bloodGroup" name="bloodGroup" required><br><br>
+    
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="4" required></textarea><br><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</body>
+</html>

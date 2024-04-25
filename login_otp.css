@@ -1,0 +1,26 @@
+body{
+    margin-top:50px;
+    background: #eaeaea;
+}
+.account-block {
+    padding: 0;
+    background-image: url('./medical-insurance-concept-illustration-a-man-filling-medical-document-form-can-use-for-web-homepage-mobile-apps-web-banner-character-cartoon-illustration-flat-style-free-vector.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    border-radius: 50px;
+    height: 89%;
+    margin-right: 20px;
+    position: relative;
+}
+
+
+.text-theme {
+    color: #2fc4b2 !important;
+}
+
+.btn-theme {
+    background-color: #2fc4b2;
+    border-color: #2fc4b2;
+    color: #fff;
+}

@@ -1,0 +1,341 @@
+// app.get("/",async(req,res)=>{
+// res.render("mlogin");
+// });
+// app.get("/signup",async(req,res)=>{
+//   res.render("signup");
+//   });
+// app.post("/signup",async(req,res)=>{
+//   const data={
+// name: req.body.username,
+// email: req.body.emailaddress,
+// password: req.body.password,
+
+//   }
+//   const existingUser =await collection.findOne({email:data.email});
+//   if(existingUser){
+//     res.send("User already exists");
+//   }else{
+//     const saltRounds=10;
+//     const hashedPassword=await bcrypt.hash(data.password,saltRounds);
+//     data.password =hashedPassword;
+//   const userdata=await collection.insertMany(data);
+//   console.log(userdata);}
+// });
+// app.post("/login",async(req,res)=>{
+// try{
+// const check=await collection.findOne({email:req.body.emailaddress});
+// if(!check){
+//   res.send("Email Not Found");
+// }
+// const ispasswordMatch= await bcrypt.compare(req.body.password,check.password);
+// if(ispasswordMatch){
+//   res.render("./index.ejs");
+// }
+// else{
+//   res.send("Wrong Password");
+// }
+// }
+// catch{
+// res.send("Wrong Details");
+// }
+// });
+
+// const transporter = nodemailer.createTransport({
+//   service: 'gmail',
+//   auth: {
+//     user: 'jeevanbyanant0001gmail.com',
+//     pass: 'zhqd kppv cqyj rvoz',
+//   },
+// });
+
+// Generate OTP
+// const generateOTP = () => {
+//   return Math.floor(1000 + Math.random() * 9000).toString();
+// };
+// app.get("/forgotpassword",async(req,res)=>{
+//   res.render("./forgotpassword.html");
+//   });
+// app.post('/forgotpassword', async (req, res) => {
+//   const { email } = req.body;
+
+//   try {
+//     const user = await user.findOne({ email });
+
+//     if (!user) {
+//       return res.status(404).json({ message: 'User not found' });
+//     }
+
+  
+    // const resetToken = generateOTP();
+    // const resetTokenExpiration = Date.now() + 3600000; // 1 hour
+
+    // Save reset token and expiration time to the user in the database
+    // user.resetToken = resetToken;
+    // user.resetTokenExpiration = resetTokenExpiration;
+    // await user.save();
+
+//     // Send email with reset link
+//     const resetLink = `http://your-frontend-app/reset-password?token=${resetToken}&email=${email}`;
+//     const mailOptions = {
+//       from: 'keshusrivastava103@gmail.com',
+//       to: email,
+//       subject: 'Password Reset',
+//       text: `Click the following link to reset your password: ${resetLink}`,
+//     };
+
+//     await transporter.sendMail(mailOptions);
+
+//     res.status(200).json({ message: 'Reset email sent successfully' });
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).json({ message: 'Internal server error' });
+//   }
+// });
+
+// // Reset Password route
+// app.post('/resetpassword', async (req, res) => {
+//   const { email, token, newPassword } = req.body;
+
+//   try {
+//     const user = await user.findOne({
+//       email,
+//       resetToken: token,
+//       resetTokenExpiration: { $gt: Date.now() },
+//     });
+
+//     if (!user) {
+//       return res.status(400).json({ message: 'Invalid or expired token' });
+    // }
+
+    // Update password and clear reset token fields
+//     user.password = newPassword;
+//     user.resetToken = undefined;
+//     user.resetTokenExpiration = undefined;
+//     await user.save();
+
+//     res.status(200).json({ message: 'Password reset successful' });
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).json({ message: 'Internal server error' });
+//   }
+// });
+// app.post('/verify-otp', async (req, res) => {
+  //   const { email, otp } = req.body;
+  
+  //   try {
+  //     // Find the user by email
+  //     const user = await user.findOne({ email });
+  
+  //     if (!user) {
+  //       // Display an alert and redirect to the signup page with an error message
+  //       return res.send('<script>alert("User not found."); window.location="/register";</script>');
+  //     }
+  
+  //     // Check if OTP is correct and not expired
+  //     if (user.verificationOTP === otp && user.verificationExpiry > Date.now()) {
+  //       // Update user as verified and clear OTP fields
+  //       user.verificationOTP = null;
+  //       user.verificationExpiry = null;
+  //       await user.save();
+  
+  //       // Display an alert and redirect to the index page
+  //       return res.send('<script>alert("Email verified successfully."); window.location="/LogInSignUp";</script>');
+  //     } else {
+  //       // If OTP is invalid or expired, handle cleanup by removing the incomplete user
+  //       await cleanupIncompleteUser(user._id);
+  //       // Display an alert and redirect to the signup page with an error message
+  //       return res.send('<script>alert("Invalid or expired OTP."); window.location="/register";</script>');
+  //     }
+  //   } catch (error) {
+  //     console.error('Error verifying OTP:', error);
+  //     // Display an alert and redirect to the signup page with an error message
+  //     res.send('<script>alert("Internal server error."); window.location="/register";</script>');
+  //   }
+  // });
+
+  
+
+  
+  
+  // app.post('/signup', async (req, res) => {
+  //   const { email, password } = req.body;
+  //   const hashedPassword = bcrypt.hashSync(password, 10);
+  //   const verificationOTP = generateOTP();
+  //   const verificationExpiry = new Date(Date.now() + 60 * 1000); // 1 minute expiry
+  
+  //   try {
+  //     // Check if the user already exists in the database
+  //     const existingUser = await user.findOne({ email });
+  
+  //     if (existingUser) {
+  //       // User already exists, redirect to index page
+  //       return res.send('<script>alert("User Already exist Please Login !!"); window.location="/index";</script>');
+  //     }
+  
+  //     // Create a new user with email, hashed password, OTP, and its expiry
+  //     const newUser = new User({
+  //       email,
+  //       password: hashedPassword,
+  //       verificationOTP,
+  //       verificationExpiry,
+  //     });
+  
+  //     // Save the user to the database
+  //     await newUser.save();
+  
+  //     // Send verification email with OTP
+  //     const transporter = nodemailer.createTransport({
+  //       service: 'gmail',
+  //       auth: {
+  //         user: 'jeevanbyanant0001gmail.com',
+  //         pass:'zhqd kppv cqyj rvoz',
+  //       },
+  //     });
+  
+  //     const mailOptions = {
+  //       from: 'jeevanbyanant0001gmail.com',
+  //       to: email,
+  //       subject: 'Email Verification',
+  //       text: `Your OTP for email verification is: ${verificationOTP}`,
+  //     };
+  
+  //     transporter.sendMail(mailOptions, async (error, info) => {
+  //       if (error) {
+  //         console.error('Failed to send verification email:', error);
+  //         // If email sending fails, handle cleanup by removing the incomplete user
+  //         await cleanupIncompleteUser(newUser._id);
+  //         return res.status(500).json({ message: 'Failed to send verification email' });
+  //       }
+  
+  //       // Display an alert and redirect to the verification page
+  //       res.send(
+  //         '<script>alert("Verification email sent. Check your inbox."); window.location="/login_otp";</script>'
+  //       );
+  //     });
+  //   } catch (error) {
+  //     console.error('Error during signup:', error);
+  //     // Display an alert and redirect to the signup page with an error message
+  //     res.send('<script>alert("Error during signup. User already exists."); window.location="/register";</script>');
+  //   }
+  // });
+  
+  // app.post('/verify-otp', async (req, res) => {
+  //   const { email, otp } = req.body;
+  
+  //   try {
+  //     // Find the user by email
+  //     const user = await user.findOne({ email });
+  
+  //     if (!user) {
+  //       // Display an alert and redirect to the signup page with an error message
+  //       return res.send('<script>alert("User not found."); window.location="/register";</script>');
+  //     }
+  
+  //     // Check if OTP is correct and not expired
+  //     if (user.verificationOTP === otp && user.verificationExpiry > Date.now()) {
+  //       // Update user as verified and clear OTP fields
+  //       user.verificationOTP = null;
+  //       user.verificationExpiry = null;
+  //       await user.save();
+  
+  //       // Display an alert and redirect to the index page
+  //       return res.send('<script>alert("Email verified successfully."); window.location="/index";</script>');
+  //     } else {
+  //       // If OTP is invalid or expired, handle cleanup by removing the incomplete user
+  //       await cleanupIncompleteUser(user._id);
+  //       // Display an alert and redirect to the signup page with an error message
+  //       return res.send('<script>alert("Invalid or expired OTP."); window.location="/register";</script>');
+  //     }
+  //   } catch (error) {
+  //     console.error('Error verifying OTP:', error);
+  //     // Display an alert and redirect to the signup page with an error message
+  //     res.send('<script>alert("Internal server error."); window.location="/register";</script>');
+  //   }
+  // });
+  
+  // Existing routes...
+  
+  // function generateOTP() {
+  //   // Generate a 6-digit OTP
+  //   return Math.floor(100000 + Math.random() * 900000).toString();
+  // }
+  // Assuming User is your MongoDB model and other dependencies are properly required
+
+// app.post('/verify-otp', async (req, res) => {
+//   const { email, otp } = req.body;
+
+//   try {
+//       const user = await user.findOne({ email });
+
+//       if (!user) {
+//           return res.status(404).json({ message: 'User not found.' });
+//       }
+
+//       if (user.verificationOTP === otp && user.verificationExpiry > Date.now()) {
+//           user.verificationOTP = null;
+//           user.verificationExpiry = null;
+//           await user.save();
+//           return res.status(200).json({ message: 'Email verified successfully.' });
+//       } else {
+//           await cleanupIncompleteUser(user._id);
+//           return res.status(400).json({ message: 'Invalid or expired OTP.' });
+//       }
+//   } catch (error) {
+//       console.error('Error verifying OTP:', error);
+//       return res.status(500).json({ message: 'Internal server error.' });
+//   }
+// });
+
+// app.post('/register', async (req, res) => {
+//   const { email, password } = req.body;
+//   const hashedPassword = bcrypt.hashSync(password, 10);
+//   const verificationOTP = generateOTP();
+//   const verificationExpiry = new Date(Date.now() + 60 * 1000); // 1 minute expiry
+
+//   try {
+//       const existingUser = await user.findOne({ email });
+
+//       if (existingUser) {
+//           return res.status(400).json({ message: 'User already exists. Please login.' });
+//       }
+
+//       const newUser = new User({
+//           email,
+//           password: hashedPassword,
+//           verificationOTP,
+//           verificationExpiry,
+//       });
+
+//       await newUser.save();
+
+//       const transporter = nodemailer.createTransport({
+//           service: 'gmail',
+//           auth: {
+//               user: "jeevanbyanant0001@gmail.com",
+//               pass: "zhqd kppv cqyj rvoz",
+//           },
+//       });
+
+//       const mailOptions = {
+//           from: "jeevanbyanant0001@gmail.com",
+//           to: email,
+//           subject: 'Email Verification',
+//           text: `Your OTP for email verification is: ${verificationOTP}`,
+//       };
+
+//       transporter.sendMail(mailOptions, async (error, info) => {
+//           if (error) {
+//               console.error('Failed to send verification email:', error);
+//               await cleanupIncompleteUser(newUser._id);
+//               return res.status(500).json({ message: 'Failed to send verification email' });
+//           }
+
+//           return res.status(200).json({ message: 'Verification email sent. Check your inbox.' });
+//       });
+//   } catch (error) {
+//       console.error('Error during signup:', error);
+//       return res.status(500).json({ message: 'Internal server error.' });
+//   }
+// });
+
+// Assuming cleanupIncompleteUser function is defined elsewhere in your code

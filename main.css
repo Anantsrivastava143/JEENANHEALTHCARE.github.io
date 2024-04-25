@@ -1,0 +1,748 @@
+
+
+.hero {
+  height: 100vh;
+  min-height: 570px;
+  position: relative;
+    background-size: cover;
+  } 
+  
+
+   .container {
+    text-align: center !important;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+  } 
+  .container2 {
+      
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px ;
+      height: 100vh;
+      min-height: 570px;
+      align-items: center !important;
+      justify-content: center !important;
+      box-sizing: border-box;
+  }
+  .text1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff !important;
+    margin-top: 210px;
+  }
+  .text2{
+    color: #2fc4b2 !important;
+  }
+  .para1{
+    text-align: center !important;
+    max-width: 500px;
+    color: #fff;
+    margin-bottom: 224px;
+  }
+  .disease_cover{
+    width: 100%;
+    height: auto;
+    display: flex;
+  }
+  .disease{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .disease_cover .disease .eye{
+    width: 25%;
+    height: 200px;
+    background-color: #2fc4b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+  }
+ .disease_cover .disease .eye:hover{
+    background-color: whitesmoke;
+    transition: 0.3s ease-in-out;   
+
+  }
+  .eye i{
+    font-size: 40px;
+    color: whitesmoke;
+  }
+  .eye p{
+    font-size: 25px;
+    margin-top: 10px;
+    color: whitesmoke;
+  }
+  .eye:hover i{
+    color:#2fc4b2;
+  }
+  .eye:hover p{
+    color: black;
+  }
+  .disease_cover .disease .cardiology{
+    width: 25%;
+    height: 200px;
+    background-color: #2fc4b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+  }
+ .disease_cover .disease .cardiology:hover{
+    background: whitesmoke;
+    transition: 0.3s ease-in-out;   
+
+  }
+  .cardiology i{
+    font-size: 40px;
+    color: whitesmoke;
+  }
+  .cardiology p{
+    font-size: 25px;
+    margin-top: 10px;
+    color: whitesmoke;
+  }
+  .cardiology:hover i{
+    color:#2fc4b2;
+  }
+  .cardiology:hover p{
+    color: black;
+  }
+
+  .disease_cover .disease .Pulmonology{
+    width: 25%;
+    height: 200px;
+    background-color: #2fc4b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+  }
+ .disease_cover .disease .Pulmonology:hover{
+    background: whitesmoke;
+    transition: 0.3s ease-in-out;   
+
+  }
+  .Pulmonology i{
+    font-size: 40px;
+    color: whitesmoke;
+  }
+  .Pulmonology p{
+    font-size: 25px;
+    margin-top: 10px;
+    color: whitesmoke;
+  }
+  .Pulmonology:hover i{
+    color:#2fc4b2;
+  }
+  .Pulmonology:hover p{
+    color: black;
+  }
+
+  .disease_cover .disease .laboratory{
+    width: 25%;
+    height: 200px;
+    background-color: #2fc4b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+  }
+ .disease_cover .disease .laboratory:hover{
+    background: whitesmoke;
+    transition: 0.3s ease-in-out;   
+
+  }
+  .laboratory i{
+    font-size: 40px;
+    color: whitesmoke;
+  }
+  .laboratory p{
+    font-size: 25px;
+    margin-top: 10px;
+    color: whitesmoke;
+  }
+  .laboratory:hover i{
+    color:#2fc4b2;
+  }
+  .laboratory:hover p{
+    color: black;
+  }
+
+  .disease_cover .disease .physician{
+    width: 25%;
+    height: 200px;
+    background-color: #2fc4b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+  }
+ .disease_cover .disease .physician:hover{
+    background: whitesmoke;
+    transition: 0.3s ease-in-out;   
+
+  }
+  .physician i{
+    font-size: 40px;
+    color: whitesmoke;
+  }
+  .physician p{
+    font-size: 25px;
+    margin-top: 10px;
+    color: whitesmoke;
+  }
+  .physician:hover i{
+    color:#2fc4b2;
+  }
+  .physician:hover p{
+    color: black;
+  }
+
+  .disease_cover .disease .ent{
+    width: 25%;
+    height: 200px;
+    background-color: #2fc4b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+  }
+ .disease_cover .disease .ent:hover{
+    background: whitesmoke;
+    transition: 0.3s ease-in-out;   
+
+  }
+  .ent i{
+    font-size: 40px;
+    color: whitesmoke;
+  }
+  .ent p{
+    font-size: 25px;
+    margin-top: 10px;
+    color: whitesmoke;
+  }
+  .ent:hover i{
+    color:#2fc4b2;
+  }
+  .ent:hover p{
+    color: black;
+  }
+
+ 
+  .disease_cover .disease .medical{
+    width: 25%;
+    height: 200px;
+    background-color: #2fc4b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+  }
+ .disease_cover .disease .medical:hover{
+    background: whitesmoke;
+    transition: 0.3s ease-in-out;   
+
+  }
+  .medical i{
+    font-size: 40px;
+    color: whitesmoke;
+  }
+  .medical p{
+    font-size: 25px;
+    margin-top: 10px;
+    color: whitesmoke;
+  }
+  .medical:hover i{
+    color:#2fc4b2;
+  }
+  .medical:hover p{
+    color: black;
+  }
+
+ 
+  .disease_cover .disease .neurology{
+    width: 25%;
+    height: 200px;
+    background-color: #2fc4b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+  }
+ .disease_cover .disease .neurology:hover{
+    background: whitesmoke;
+    transition: 0.3s ease-in-out;   
+  }
+  .neurology i{
+    font-size: 40px;
+    color: whitesmoke;
+  }
+  .neurology p{
+    font-size: 25px;
+    margin-top: 10px;
+    color: whitesmoke;
+  }
+  .neurology:hover i{
+    color:#2fc4b2;
+  }
+  .neurology:hover p{
+    color: black;
+  }
+
+ .ss1{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+ }
+ .ss2{
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      height: auto;
+      min-height: 570px;
+      align-items: center ;
+      justify-content: center ;
+ }
+ .ss1 .ss2 .text3{
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+ .ss1 .ss2 .about_us_image{
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+ .about_us_image img{
+  max-width: 400px 
+ }
+ .btn1{
+    display: flex;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 0.25rem;
+    color: #fff;
+  background-color: #2fc4b2;
+  border-color: #2fc4b2;
+  padding: 12px 25px;
+  text-decoration: none;
+ }
+ .abt1{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+ }
+ .abt2{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  min-height: 570px;
+  align-items: center ;
+  justify-content: center ;
+ }
+ .abt1 .abt2 .text4{
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+ .btn2{
+  display: flex;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #fff;
+background-color: #2fc4b2;
+border-color: #2fc4b2;
+padding: 12px 25px;
+text-decoration: none;
+ }
+
+.doc1{
+  width: 100%;
+  
+  /* background-color:  #2fc4b2; */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.doc1 h1{
+  text-align: center;
+  
+}
+.doc2{
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.doc1 .doc2 .card{
+  width: 35%;
+  /* height: 200px; */
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid black; */
+  align-items: center;
+  flex-direction: column;
+}
+.testimonial{
+  width: 100%;
+  margin-top: 60px;
+  /* margin-bottom: 60px; */
+  background-color:  #eaeaec ;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.testimonial  h1{
+  text-align: center;
+}
+.testimonial  h4{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.testimonial2{
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 100px 
+}
+.testimonial .testimonial2 .card1{
+  width: 35%;
+ 
+  margin-left: 80px;
+  display: flex;
+  background-color: white;
+  
+  border-radius: 10px;
+
+  flex-direction: column;
+  padding: 12px 25px;
+}
+.card-link{display: flex;
+  width: 120px;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: #fff;
+background-color: #2fc4b2;
+border-color: #2fc4b2;
+padding: 12px 15px;
+text-decoration: none;}
+
+.book .book1{
+  /* width: 1000px; */
+  text-align: center;
+}
+/* .pbook{
+  width: 100px;
+  text-align: center;
+} */
+.abook{
+  /* display: flex; */
+  margin-top: 30px;
+  width: 120px;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 1rem;
+  color: #fff;
+background-color: #2fc4b2;
+border-color: #2fc4b2;
+padding: 15px 55px;
+text-decoration: none;
+}
+.end{
+  width: 100%;
+  background-color:  #ececed ;
+  /* background-color:  #2fc4b2; */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.end1{
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+.end .end1 .foot{
+/* width: 35%; */
+ margin-top: 60px;
+  margin-left: 60px;
+  display: flex;
+  /* background-color: white; */
+  
+  /* border-radius: 10px; */
+
+  flex-direction: column;
+  
+}
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    height: 100vh;
+    min-height: 570px;
+    position: relative;
+      background-size: cover;
+      width: 117%;
+  } 
+    .disease_cover{
+      width: 117%;
+      height: auto;
+      display: flex;
+    }
+    .disease{
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .disease_cover .disease .eye{
+      width: 100%;
+      height: 200px;
+      background-color: #2fc4b2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .disease_cover .disease .cardiology{
+      width: 100%;
+      height: 200px;
+      background-color: #2fc4b2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .disease_cover .disease .Pulmonology{
+      width: 100%;
+      height: 200px;
+      background-color: #2fc4b2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .disease_cover .disease .laboratory{
+      width: 100%;
+      height: 200px;
+      background-color: #2fc4b2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .disease_cover .disease .physician{
+      width: 100%;
+      height: 200px;
+      background-color: #2fc4b2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .disease_cover .disease .ent{
+      width: 100%;
+      height: 200px;
+      background-color: #2fc4b2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .disease_cover .disease .medical{
+      width: 100%;
+      height: 200px;
+      background-color: #2fc4b2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .disease_cover .disease .neurology{
+      width: 100%;
+      height: 200px;
+      background-color: #2fc4b2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .ss1{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* padding-right: 15px; */
+      padding-left: 36px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .ss2{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: auto;
+        min-height: 570px;
+        align-items: center ;
+        justify-content: center ;
+    }
+     .ss1 .ss2 .text3{
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     }
+     .ss1 .ss2 .about_us_image{
+      width: 50%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     }
+     .about_us_image img{
+      max-width: 350px 
+     }
+     .abt1{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+        /* padding-right: 15px; */
+        padding-left: 46px;
+        margin-right: auto;
+        margin-left: 20px;
+    margin-top: 50px;
+     }
+     .abt2{
+      width: 100%;
+      display: flex;
+      flex-wrap:wrap-reverse;
+      height: auto;
+      min-height: 570px;
+      align-items: center ;
+      justify-content: center ;
+     }
+     .abt1 .abt2 .text4{
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     }
+     .doc1{
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+    margin-left: 20px;
+    }
+    .testimonial{
+      width: 117%;
+      /* margin-left: 35px; */
+      margin-top: 60px;
+      /* margin-bottom: 60px; */
+      background-color:  #eaeaec ;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .testimonial .testimonial2 .card1{
+      width: 35%;
+     
+      margin-left: 24px;
+      margin-bottom: 10px;
+      display: flex;
+      background-color: white;
+      
+      border-radius: 10px;
+    
+      flex-direction: column;
+      padding: 12px 25px;
+    }
+    .book .book1{
+      width: 100%;
+      margin-left: 35px;
+      text-align: center;
+    }
+    .end{
+      width: 117%;
+      /* margin-left: 35px; */
+      background-color:  #ececed ;
+      /* background-color:  #2fc4b2; */
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      margin-top: 100px;
+    }
+}
+

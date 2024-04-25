@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JEEVAN</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+      async function fetchDoctorsFromJSON(department) {
+            try {
+                const response = await fetch('./doctor.json'); 
+        
+                if (!response.ok) {
+                    throw new Error(`Error fetching doctors: ${response.statusText}`);
+                }
+        
+                const doctorsData = await response.json();
+                return doctorsData[department] || [];
+            } catch (error) {
+                console.error('Error fetching doctors:', error.message);
+                return [];
+            }
+        }
+async function openDoctorDetails(department) {
+    try {
+        const doctors = await fetchDoctorsFromJSON(department);
+        if (doctors.length > 0) {
+            const doctorsJSON = encodeURIComponent(JSON.stringify(doctors));
+            window.location.href = `doctor_details.html?department=${department}&doctors=${doctorsJSON}`;
+        } else {
+            console.error(`Doctors data not available for department: ${department}`);
+        }
+    } catch (error) {
+        console.error('Error opening doctor details:', error.message);
+    }
+}
+</script>
+</head>
+<div>
+  <nav class="navbar fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="color: white; font-size: 35px ; margin-left: 50px;">JEEVAN</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">JEEVAN</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./mindex.html">LogIn/SignUp</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Desk
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./medical.html">Create Record</a></li>
+                <!-- <li><a class="dropdown-item" href="#">Pharmacy</a></li> -->
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+  </nav>
+
+  <div class="hero" style="background-image: url(./hero_bg_1.jpg);">
+    <div class="container">
+      <div class="container2">
+        <h1 class="text1">
+          <strong class="text2">Improve</strong>
+          your overall health.
+        </h1>
+        <div class="para1">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, doloribus commodi rerum eius aliquid sequi
+          recusandae labore? Velit exercitationem dolorem aliquid consectetur ex unde et porro. Itaque minus rem
+          adipisci!
+        </div>
+      </div>
+    </div>
+  </div>
+<form action="/click" method="post">
+  <div class="disease_cover">
+    <div class="disease">
+
+      <div class="eye" onclick="openDoctorDetails('Eye')">
+        <i class="fa-solid fa-eye"></i>
+        <p>Eye Icon</p>
+      </div>
+
+      <div class="cardiology" onclick="openDoctorDetails('Cardiology')">
+        <i class="fa-solid fa-heart"></i>
+        <p>Cardiology</p>
+      </div>
+      
+      <div class="Pulmonology" onclick="openDoctorDetails('Pulmonology')">
+        <i class="fa-solid fa-lungs"></i>
+        <p>Pulmonology</p>
+      </div>
+      
+      <div class="neurology" onclick="openDoctorDetails('Neurology')">
+        <i class="fa-solid fa-brain"></i>
+        <p>Neurology</p>
+        </div>
+     
+      <div class="physician" onclick="openDoctorDetails('Physician')">
+        <i class="fa-solid fa-user-nurse"></i>
+        <p>Physician</p>
+        </div>
+        <div class="ent" onclick="openDoctorDetails('Ent')">
+          <i class="fa-solid fa-ear-deaf"></i>
+          <p>ENT</p>
+          </div>
+          <div class="laboratory" onclick="openDoctorDetails('laboratory')">
+            <i class="fa-solid fa-user-nurse"></i>
+            <p>laboratory</p>
+            </div>
+          <div class="medical" onclick="openDoctorDetails('Medical')">
+            <i class="fa-solid fa-notes-medical"></i>
+            <p>Medical Record</p>
+            </div>
+    </div>
+  </div>
+</form>
+    <div class="ss1">
+      <div class="ss2">
+        <div class="text3">
+          <h3>Why Choose Us</h3>
+          <p>Our reputation for outstanding care and family-like atmosphere, together with advanced medical technology and facilities ensures we attract leading consultants and specialists from the industry to work with us.</p>
+          <p>
+            <a href="./contact.html" class="btn1 ">Contact Us</a>
+          </p>
+        </div>
+        
+        <div class="about_us_image" >
+          <img src="./accupuncture_1.png" alt="img">
+
+        </div>
+      </div>
+    </div>
+    <div class="abt1">
+      <div class="abt2">
+        <div class="imgabt">
+          <div class="card" style="width: 18rem; margin-right: 30px;">
+            <img src="./doctor1.jpg" class="card-img-top" alt="...">
+            <div class="card-body" >
+              <p class="card-text" >Professional doctor for the best treatment of citizen across world.</p>
+            </div>
+          </div>
+        </div>
+        <div class="text4">
+          <h3>About Our Clinic</h3>
+          <p>Introducing Jeevan,your trusted companion in healthcare.Our cutting-edge medical web app revolutionizes your health journey.Access your medical records securely,schedule appointments effortlessly and receive personalized health recommendation tailored just for you.</p>
+          <p>
+            <a href="./about.html" class="btn2 ">Read More</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="doc1">
+      <h1 style="color: #242626; font-family: 'Times New Roman', Times, serif;">OUR DOCTORS</h1>
+      <div class="doc2">
+        <div class="card" style="width: 18rem;">
+          <img src="./doctor2.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Dr.Meena Pandey<br>Neurologist</p>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="./doctor3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Dr.Arpita Sinha<br>Cardiologist</p>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="./doctor4.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Dr.Ishita Verma<br>ENT specialist</p>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="./doctor1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Dr.Shalu Gupta<br>Radiologist</p>
+          </div>
+        </div>
+        
+      </div>
+     
+    </div>
+    <div class="testimonial">
+      <h4 style="color: #2fc4b2; font-family: 'Times New Roman', Times, serif;">Testimonials</h4>
+      <h1 style="color: darkgrey; font-family: 'Times New Roman', Times, serif;">Happy Customers</h1>
+      <div class="testimonial2">
+        <div class="card1" style="width: 18rem;">
+          <div class="card-body">
+            <!-- <h5 class="card-title">Card title</h5> -->
+            <img src="./person_1.jpg" style="width: 50px;" class="rounded me-2" alt="...">
+            <h6 class="card-subtitle mb-2 text-muted">Mr.John williams</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="card-link">Read More</a>
+            <!-- <a href="#" class="card-link">Another link</a> -->
+          </div>
+        </div>
+        <div class="card1" style="width: 18rem;">
+          <div class="card-body">
+            <!-- <h5 class="card-title">Card title</h5> -->
+            <img src="./person_2.jpg" style="width: 50px;" class="rounded me-2" alt="...">
+            <h6 class="card-subtitle mb-2 text-muted">Mrs.kety Methew</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="card-link">Read More</a>
+            <!-- <a href="#" class="card-link">Another link</a> -->
+          </div>
+        </div>
+        <div class="card1" style="width: 18rem;">
+          <div class="card-body">
+            <!-- <h5 class="card-title">Card title</h5> -->
+            <img src="./person_3.jpg" style="width: 50px;"class="rounded me-2" alt="...">
+            <h6 class="card-subtitle mb-2 text-muted">Mrs.Himanshi </h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="card-link">Read More</a>
+            <!-- <a href="#" class="card-link">Another link</a> -->
+          </div>
+        </div>
+      
+      </div>
+    </div>
+      <div class="book">
+        <div class="book1">
+          <h1 style="color: #2fc4b2; font-family: 'Times New Roman', Times, serif; margin-top: 100px;">Book an Appointment</h1>
+          <p class="pbook" style="font-family: 'Times New Roman', Times, serif;
+          margin-top: 30px; font-size: 20px;">Jeevan,the healthcare web app,simplifies appointment booking.Users can easily select healthcare professionals,preferred locations,and convenient time slots.This user-friendly platform offers real-time availability updates,enhancing efficiency and patient-centered care.</p>
+          <a href="./bookappointment.html" class="abook" >Book an Appointment</a>
+        </div>
+    </div>
+<div class="end">
+  <div class="end1">
+    <div class="foot">
+      <center><i class="fa-solid fa-phone"style="font-size: 30px;margin-bottom: 15px;"></i></center>
+      <p style="font-size: larger;">111-35443-6664</p>
+    </div>
+    <div class="foot">
+      <center><i class="fa-solid fa-location-dot"style="font-size: 30px;margin-bottom: 15px;"></i></center>
+      <p style="font-size: larger;">2130 Fulton Street San Diego, CA 94117-1080 USA</p>
+    </div>
+    <div class="foot" >
+     <center> <i class="fa-solid fa-envelope" style="font-size: 30px; margin-bottom: 15px;"></i></center>
+      <p style="font-size: larger;">Jeevan0001@gmail.com</p>
+    </div>
+  <p>Copyright ©2024 All rights reserved | By Anant Groups</p>
+  </div>
+</div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+        <script>
+          window.embeddedChatbotConfig = {
+          chatbotId: "GE3b91zdUr8W6vBP73fH3",
+          domain: "www.chatbase.co"
+          }
+          </script>
+          <script
+          src="https://www.chatbase.co/embed.min.js"
+          chatbotId="GE3b91zdUr8W6vBP73fH3"
+          domain="www.chatbase.co"
+          defer>
+          </script>
+</body>
+
+</html>
